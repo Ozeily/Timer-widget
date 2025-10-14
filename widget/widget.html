@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Widget</title>
+    <link rel="stylesheet" href="widget.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="widget.js" defer></script>
+</head>
+<body onload="renderTimer()">
+    <div id="timer-container">
+        <div id="timer">00:00</div>
+        <div id="controls-div">
+            <button id="subtractMin" class="control" type="button" onclick="subtractMin()">
+                <span class="material-symbols-rounded">remove</span>
+            </button>
+            <button id="play" class="control with-bg" type="button" onclick="switchPlayIcon()">
+                <span id="play-icon" class="material-symbols-rounded">play_arrow</span>
+            </button>
+            <button id="addMin" class="control" type="button" onclick="addMin()">
+                <span class="material-symbols-rounded">add</span>
+            </button>
+        </div>
+        <button id="quit" class="control" type="button" onclick="quit()">Quit</button>
+    </div>
+</body>
+</html>

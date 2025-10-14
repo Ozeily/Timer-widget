@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer widget customisation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="settings">
+        <h1>Settings</h1>
+        <form id="form">
+            <div class="setting">
+                <label for="defaultDuration">Default duration (min)</label>
+                <input name="defaultDuration" type="number" min="1" value="1">
+            </div>
+            <div class="setting">
+                <label for="bgColour">Background colour</label>
+                <input name="bgColour" type="color" value="#ffffff">
+            </div>
+            <div class="setting">
+                <label for="textColour">Text colour</label>
+                <input name="textColour" type="color">
+            </div>
+            <button id="copyURLBtn" type="button" onclick="copyURL()">Copy URL</button>
+        </form>
+    </div>
+    <iframe src="widget/widget.html" id="preview"></iframe>
+</body>
+</html>
