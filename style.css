@@ -61,3 +61,18 @@ button:active {
     background-color: green;
     color: white;
 }
+
+@media (max-width: 48em) {
+    body {
+        flex-direction: column;
+    }
+    #preview {
+        order: 1;
+        width: 100%;
+    }
+    .settings {
+        order: 2;
+        width: 100%;
+        height: 50;
+    }
+}

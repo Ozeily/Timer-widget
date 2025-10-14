@@ -50,29 +50,44 @@ body {
     border: 2px solid var(--secondary);
     font-size: clamp(1vw, 30vw, 20rem);
     color: var(--primary);
+    container-type: size;
+}
+
+#timer {
+    margin-bottom: -10px;
+}
+
+@container (aspect-ratio > 1) {
+    #timer {
+        font-size: clamp(1cqh, 50cqh, 35cqw);
+        margin-bottom: -15px;
+    }
 }
 
 #controls-div {
     display: flex;
     justify-content: space-evenly;
+    align-items: center; /*icons centered vertically*/
     width: 100%;
 }
 
 .control .material-symbols-rounded {
     font-size: clamp(1vw, 10vw, 10rem);
 }
+#quit {
+    font-size: clamp(0.5vw, 5vw, 5rem);
+}
 
 .control {
     display: flex;
     background-color: transparent;
-    margin: 5px;
     padding: 5px;
     border-radius: 100%;
     color: var(--secondary);
     font-size: clamp(0.5vw, 7vw, 5rem);
 }
 
-.control.with-bg {
+#play {
     background-color: var(--secondary);
     color: var(--primary);
 }
@@ -81,7 +96,7 @@ body {
     color: var(--primary);
 }
 
-.control.with-bg:active {
+#play:active {
     background-color: var(--primary);
     color: var(--bgColour);
 }
