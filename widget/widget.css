@@ -51,6 +51,7 @@ body {
     font-size: clamp(1vw, 30vw, 20rem);
     color: var(--primary);
     container-type: size;
+    position: relative;
 }
 
 #timer {
@@ -62,6 +63,17 @@ body {
         font-size: clamp(1cqh, 50cqh, 35cqw);
         margin-bottom: -15px;
     }
+}
+#top-controls {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 1px; /*top*/
+    justify-content: flex-end; /*to the right*/
+}
+
+#top-controls .material-symbols-rounded {
+    font-size: clamp(1vw, 5vw, 5rem);
 }
 
 #controls-div {
@@ -92,7 +104,7 @@ body {
     color: var(--primary);
 }
 
-.control:active {
+.control:active:not(#notif-btn) {
     color: var(--primary);
 }
 

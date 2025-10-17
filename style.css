@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     width: 50%;
     height: 100%;
+    padding: 5px;
 }
 
 .setting {
@@ -50,7 +51,7 @@ input {
 
 button {
     display: flex;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
     padding: 10px;
     border-radius: 20px;
     color: black;

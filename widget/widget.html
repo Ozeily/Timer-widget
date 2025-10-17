@@ -13,7 +13,18 @@
 </head>
 <body onload="renderTimer()">
     <div id="timer-container">
+
+        <div id="top-controls">
+            <button id="notif-btn" class="control" type="button" onclick="toggleNotif()">
+                <span id="notif-icon" class="material-symbols-rounded">notifications</span>
+            </button>
+            <button id="settings" class="control" type="button" onclick="window.open('https://ozeily.github.io/Timer-widget/')">
+                <span id="settings-icon" class="material-symbols-rounded">settings</span>
+            </button>
+        </div>
+
         <div id="timer">00:00</div>
+
         <div id="controls-div">
             <button id="subtractMin" class="control" type="button" onclick="subtractMin()">
                 <span class="material-symbols-rounded">remove</span>

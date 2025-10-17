@@ -1,7 +1,9 @@
 //DOM
 let timerElt = document.querySelector("#timer");
 let playIcon = document.querySelector("#play-icon");
+let notifIcon = document.querySelector("#notif-icon")
 let playIconState = playIcon.innerText;
+let notifIconState = notifIcon.innerText;
 let root = document.documentElement;
 //variables
 let defaultDuration = 60000;
@@ -9,6 +11,9 @@ let duration = defaultDuration;
 //let oneHour = 3600000; //1hr in ms
 let oneMin = 60000; //1min in ms
 let timerID = null;
+let audio = new Audio("message-ringtone-magic.mp3");
+let notif_state = true;
+
 //Embed
 let params = new URLSearchParams(window.location.search);
 
@@ -16,6 +21,7 @@ function timer() {
     if (duration <= 0) {
         clearTimeout(timerID); //stops timer when done
         switchPlayIcon()
+        if (notif_state) audio.play();
         return
     }
     renderTimer()
@@ -69,6 +75,12 @@ function quit() {
     playIcon.innerText = playIconState;
     clearTimeout(timerID)
     renderTimer()
+}
+
+function toggleNotif() {
+    notif_state = !notif_state;
+    if (notif_state) { notifIcon.innerText = 'notifications' }
+    else { notifIcon.innerText = 'notifications_off'}
 }
 
 //form input reception
